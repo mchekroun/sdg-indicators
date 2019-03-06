@@ -17,15 +17,15 @@ remotedatabaseurl: "https://ONSdigital.github.io/sdg-data"
 
 jekyll_get_json:
   - data: meta
-    json: 'https://ONSdigital.github.io/sdg-data/meta/all.json'
+    json: 'https://sdg.mango-solutions.com/data/develop/meta/all.json'
     # cache: true
     # directory: 'remotedata'
   - data: headlines
-    json: 'https://ONSdigital.github.io/sdg-data/headline/all.json'
+    json: 'https://sdg.mango-solutions.com/data/develop/headline/all.json'
     # cache: true
     # directory: 'remotedata'
   - data: schema
-    json: 'https://ONSdigital.github.io/sdg-data/meta/schema.json'
+    json: 'https://sdg.mango-solutions.com/data/develop/meta/schema.json'
   - data: translations
     # Pin to version of the translation repo
     json: 'https://open-sdg.github.io/sdg-translations/translations-0.3.2.json'
