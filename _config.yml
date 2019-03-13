@@ -18,7 +18,7 @@ remotedatabaseurl: "https://sdg.mango-solutions.com/data/5-5-1a"
 
 jekyll_get_json:
   - data: meta
-    json: 'hhttps://sdg.mango-solutions.com/data/5-5-1a/meta/all.json'
+    json: 'https://sdg.mango-solutions.com/data/5-5-1a/meta/all.json'
     # cache: true
     # directory: 'remotedata'
   - data: headlines
