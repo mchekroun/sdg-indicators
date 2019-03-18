@@ -421,7 +421,7 @@ var indicatorView = function (model, options) {
 
   this.toCsv = function (tableData) {
     var lines = [],
-    headings = _.map(tableData.headings, function(heading) { return '"' + heading + '"'; });
+    headings = _.map(tableData.headings, function(heading) { return '"' + translations.indicator.unit_of_measurement + '"'; });
 
     lines.push(headings.join(','));
 
