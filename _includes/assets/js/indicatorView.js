@@ -580,7 +580,7 @@ var indicatorView = function (model, options) {
 
       var getHeading = function(heading, index) {
         var span = '<span class="sort" />';
-        var span_heading = '<span>' + this._model.measurementUnit + '</span>';
+        var span_heading = '<span>' + translations.indicator.unit_of_measurement + '</span>';
         return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading;
       };
 
