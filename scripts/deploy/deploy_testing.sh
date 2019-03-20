@@ -19,9 +19,8 @@ else
 fi
 
 # Keys
-openssl aes-256-cbc -K $encrypted_6a5f295aa62e_key -iv $encrypted_6a5f295aa62e_iv -in scripts/deploy/keys.tar.enc -out scripts/deploy/keys.tar -d
-tar xvf scripts/deploy/keys.tar -C scripts/deploy/
-rm scripts/deploy/keys.tar
+tar xvf keys.tar -C scripts/deploy/
+rm keys.tar
 
 chmod 600 ./scripts/deploy/deploy_key_test
 eval `ssh-agent -s`
