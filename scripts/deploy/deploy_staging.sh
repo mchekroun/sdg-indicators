@@ -15,13 +15,9 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]
 fi
 
 # Keys
-tar xvf scripts/deploy/keys.tar -C scripts/deploy/
-rm scripts/deploy/keys.tar
-chmod 600 ./scripts/deploy/deploy_key*
-
+scripts/deploy/decrypt_keys.sh
 eval `ssh-agent -s`
 ssh-add scripts/deploy/deploy_key_ds
-
 
 echo "TRAVIS_TAG = " $TRAVIS_TAG
 

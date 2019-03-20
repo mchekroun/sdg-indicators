@@ -14,10 +14,7 @@ fi
 echo "TRAVIS_TAG = " $TRAVIS_TAG
 
 # Keys
-tar xvf scripts/deploy/keys.tar -C scripts/deploy/
-rm scripts/deploy/keys.tar
-chmod 600 ./scripts/deploy/deploy_key*
-
+scripts/deploy/decrypt_keys.sh
 eval `ssh-agent -s`
 ssh-add scripts/deploy/deploy_key
 

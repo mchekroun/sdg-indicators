@@ -19,13 +19,9 @@ else
 fi
 
 # Keys
-tar xvf scripts/deploy/keys.tar -C scripts/deploy/
-rm scripts/deploy/keys.tar
-chmod 600 ./scripts/deploy/deploy_key*
-
+scripts/deploy/decrypt_keys.sh
 eval `ssh-agent -s`
 ssh-add scripts/deploy/deploy_key_test
-
 
 # Push the files over, removing anything existing already.
 ssh -oStrictHostKeyChecking=no travis@$TEST_SERVER "rm -rf ~/www/$BASEURL || true"
