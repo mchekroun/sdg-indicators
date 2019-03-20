@@ -7,5 +7,8 @@ openssl aes-256-cbc\
     -in keys.tar.enc -out keys.tar -d
 
 tar xvf keys.tar -C scripts/deploy/
-rm keys.tar keys.tar.enc
 chmod 600 ./scripts/deploy/deploy_key*
+
+# Aggressively go after the keys wherever they may be
+find . -name "keys.tar" -delete
+find . -name "keys.tar.enc" -delete
