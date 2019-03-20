@@ -12,8 +12,8 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]
 fi
 
 # Keys
-tar xvf keys.tar -C scripts/deploy/
-rm keys.tar
+tar xvf scripts/deploy/keys.tar -C scripts/deploy/
+rm scripts/deploy/keys.tar
 
 echo "TRAVIS_TAG = " $TRAVIS_TAG
 

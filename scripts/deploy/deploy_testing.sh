@@ -19,8 +19,8 @@ else
 fi
 
 # Keys
-tar xvf keys.tar -C scripts/deploy/
-rm keys.tar
+tar xvf scripts/deploy/keys.tar -C scripts/deploy/
+rm scripts/deploy/keys.tar
 
 chmod 600 ./scripts/deploy/deploy_key_test
 eval `ssh-agent -s`
