@@ -11,21 +11,13 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]
     exit 0
 fi
 
-# Keys
-tar xvf scripts/deploy/keys.tar -C scripts/deploy/
-rm scripts/deploy/keys.tar
-
 echo "TRAVIS_TAG = " $TRAVIS_TAG
 
+# Keys
+scripts/deploy/keys.sh
 
 # Clone the existing gh-pages for this repo into out/
 # Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
-
-chmod 600 ./scripts/deploy/deploy_key
-chmod 600 ./scripts/deploy/deploy_key_ds
-eval `ssh-agent -s`
-ssh-add scripts/deploy/deploy_key
-ssh-add scripts/deploy/deploy_key_ds
 
 git clone $TARGET_REPO out
 cd out
